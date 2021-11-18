@@ -78,7 +78,7 @@ class GenerateBadges {
 
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 		console.log('updatedReadme===' + updatedReadme);
-		return newHeaderMd;
+		return updatedReadme.append(newHeaderMd);
 	}
 
 	_getReadmeEndpoint() {
