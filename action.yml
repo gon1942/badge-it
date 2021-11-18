@@ -8,6 +8,10 @@ inputs:
     description: 'A string array of names of the badges to add'
   badge-style: 
     description: 'The prefered badge style'
+  badges_line: 
+    description: '### badgits'
+    required: false
+    default: '### badgits'
 
 branding:
   icon: "box"

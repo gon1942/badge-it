@@ -20,6 +20,7 @@ class GenerateBadges {
 		this.token = core.getInput('GITHUB_TOKEN');
 		this.inputBadges = core.getInput('badges');
 		this.badgeStyle = core.getInput('badge-style');
+		this.badgesLine = core.getInput('badges_line');
 
 		this.octokit = github.getOctokit(this.token);
 		this.repoInfo = github.context.repo;
@@ -31,6 +32,7 @@ class GenerateBadges {
 		console.log('token==' + this.token);
 		console.log('inputBadges==' + this.inputBadges);
 		console.log('repoInfo==' + this.repoInfo);
+		console.log('badgeLine==' + this.badgeLine);
 	}
 
 	_addBadges(content) {
@@ -40,7 +42,7 @@ class GenerateBadges {
 			this.badgeStyle
 		);
 		console.log('content==' + content);
-		console.log('a===' + content.includes('<h1>'));
+		console.log('a===' + content.includes('### badgesLine'));
 
 		// If the readme header is in html then don't markdown it.
 		if (content.includes('<h1>')) {
