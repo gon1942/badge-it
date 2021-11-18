@@ -83,8 +83,8 @@ class GenerateBadges {
 		// console.log('header===' + header);
 
 		const headerText = `# ${badges}`;
-		const aa = this.mdParser.makeHtml(headerText);
-		return aa;
+		const updatedReadme = this.mdParser.makeHtml(headerText);
+		return updatedReadme;
 
 		// Const header = document.createElement('h1');
 		// const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
