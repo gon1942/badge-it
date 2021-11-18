@@ -29,6 +29,8 @@ class GenerateBadges {
 		this.mdParser = new showdown.Converter();
 
 		console.log('token==' + this.token);
+		console.log('inputBadges==' + this.inputBadges);
+		console.log('repoInfo==' + this.repoInfo);
 	}
 
 	_addBadges(content) {
@@ -37,6 +39,7 @@ class GenerateBadges {
 			this.repoInfo,
 			this.badgeStyle
 		);
+		console.log('content==' + this.content);
 
 		// If the readme header is in html then don't markdown it.
 		if (content.includes('<h1>')) {
