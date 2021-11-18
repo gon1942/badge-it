@@ -58,7 +58,7 @@ class GenerateBadges {
 		}
 
 		// If header is in markfdown then make it html
-		const htmlContent = this.mdParser.makeHtml('content');
+		const htmlContent = this.mdParser.makeHtml('<h1></h1>');
 		const {
 			window: {
 				document
