@@ -45,7 +45,8 @@ class GenerateBadges {
 		console.log('a===' + content.includes('### badgesLine'));
 
 		// If the readme header is in html then don't markdown it.
-		if (content.includes('<h1>')) {
+		// if (content.includes('<h1>')) {
+		if (content.includes('### badgesLine')) {
 			const {
 				window: {
 					document
@@ -60,7 +61,7 @@ class GenerateBadges {
 		}
 
 		// If header is in markfdown then make it html
-		const htmlContent = this.mdParser.makeHtml('###badgeit');
+		const htmlContent = this.mdParser.makeHtml('### badgesLine');
 		const {
 			window: {
 				document
