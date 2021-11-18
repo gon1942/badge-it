@@ -72,7 +72,7 @@ class GenerateBadges {
 		console.log('#### Don\'t Run... check default Values(\'### badges_line\')####');
 
 		// If header is in markfdown then make it html
-		const htmlContent = this.mdParser.makeHtml(content);
+		const htmlContent = this.mdParser.makeHtml('# content');
 		const {
 			window: {
 				document
