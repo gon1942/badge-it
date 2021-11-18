@@ -65,11 +65,13 @@ class GenerateBadges {
 			}
 		} = new JSDOM(htmlContent);
 
-		const header = document.querySelector('h1:nth-child(1)');
-		console.log('header===' + header);
+		// Const header = document.querySelector('h1:nth-child(1)');
+		// console.log('header===' + header);
+		const header = document.createElement('h1');
 		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
-		console.log('headerMd===' + headerMd);
+		// Console.log('headerMd===' + headerMd);
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+		console.log('newheader===' + newHeader);
 		const newHeaderMd = this.mdParser
 			.makeMarkdown(newHeader, document)
 			.replace(/,/gm, ' ');

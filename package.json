@@ -6,7 +6,7 @@
 	"scripts": {
 		"lint": "xo --fix",
 		"build": "ncc build index.js -o dist --source-map",
-		"st": "npm run lint && npm run build" 
+		"st": "npm run lint && npm run build && git add . && git commit -m 'test' && git push " 
 	},
 	"engines": {
 		"node": ">=12"
