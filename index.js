@@ -78,6 +78,8 @@ class GenerateBadges {
 			return updatedReadme;
 		}
 
+		console.log('No badgeits String ');
+
 		// // If header is in markfdown then make it html
 		// const htmlContent = this.mdParser.makeHtml('### badgesLine');
 		// const {
