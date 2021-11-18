@@ -39,7 +39,8 @@ class GenerateBadges {
 			this.repoInfo,
 			this.badgeStyle
 		);
-		console.log('content==' + this.content);
+		console.log('content==' + content);
+		console.log('a===' + content.includes('<h1>'));
 
 		// If the readme header is in html then don't markdown it.
 		if (content.includes('<h1>')) {
@@ -67,14 +68,14 @@ class GenerateBadges {
 		const header = document.querySelector('h1:nth-child(1)');
 		console.log('header===' + header);
 		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
-
+		console.log('headerMd===' + headerMd);
 		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
 		const newHeaderMd = this.mdParser
 			.makeMarkdown(newHeader, document)
 			.replace(/,/gm, ' ');
 
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
-
+		console.log('updatedReadme===' + updatedReadme);
 		return updatedReadme;
 	}
 
