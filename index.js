@@ -16,6 +16,7 @@ const util = require('./util');
  */
 class GenerateBadges {
 	constructor() {
+		// This.token ='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';
 		this.token = core.getInput('GITHUB_TOKEN');
 		this.inputBadges = core.getInput('badges');
 		this.badgeStyle = core.getInput('badge-style');
@@ -26,6 +27,8 @@ class GenerateBadges {
 		this.repoSha = github.context.sha;
 		this.action = github.context.payload.action;
 		this.mdParser = new showdown.Converter();
+
+		console.log('token==' + this.token);
 	}
 
 	_addBadges(content) {
