@@ -38,6 +38,7 @@ const _getBadgeLinks = (badges, {owner, repo}, style = '') => {
 		switch (badge) {
 			case 'gh_license':
 				badgeLink = setStyle(`/github/license/${owner}/${repo}${addStyle}`);
+				console.log('badgeLink===' + badgeLink);
 				newBadges.push(badgeLink);
 				break;
 
