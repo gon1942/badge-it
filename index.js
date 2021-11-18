@@ -54,10 +54,11 @@ class GenerateBadges {
 			} = new JSDOM(content);
 			// Const header = document.querySelector('h1:nth-child(1)');
 			const header = document.createElement('h1');
-			console.log('aheader===' + header);
+			console.log('aheader===' + JSON.stringify(header));
 			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
 			console.log('a newHeader===' + newHeader);
 
+			console.log('header.outerHTML===' + header.outerHTML);
 			const updatedReadme = content.replace(header.outerHTML, newHeader);
 			console.log('a updatedReadme ==' + updatedReadme);
 
