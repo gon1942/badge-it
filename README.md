@@ -1,5 +1,5 @@
 # badge-it ![Build Status](<https://github.com/rocktimsaikia/badge-it/workflows/build/badge.svg>)
-upstream : https://github.com/rocktimsaikia/badge-it/
+> upstream : https://github.com/rocktimsaikia/badge-it/
 
 > Github action to automatically add [shield badges](<https://shields.io/>) to your README.md :zap:
 
