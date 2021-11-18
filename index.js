@@ -97,6 +97,9 @@ class GenerateBadges {
 			.makeMarkdown(newHeader, document)
 			.replace(/,/gm, ' ');
 		console.log('newHeaderMd===' + newHeaderMd);
+
+		console.log('headerMd=222==' + headerMd);
+
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 		console.log('updatedReadme===' + updatedReadme);
 
