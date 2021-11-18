@@ -52,15 +52,6 @@ class GenerateBadges {
 					document
 				}
 			} = new JSDOM(content);
-			// Const header = document.querySelector('h1:nth-child(1)');
-			// const header = document.createElement('h1');
-			// console.log('aheader===' + JSON.stringify(header));
-			// const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
-			// console.log('a newHeader===' + newHeader);
-
-			// console.log('header.outerHTML===' + header.outerHTML);
-			// const updatedReadme = content.replace(header.outerHTML, newHeader);
-			// console.log('a updatedReadme ==' + updatedReadme);
 
 			const header = document.createElement('h1');
 			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
@@ -78,7 +69,7 @@ class GenerateBadges {
 			return updatedReadme;
 		}
 
-		console.log('No badgeits String ');
+		console.log('Don\'t Run... check default Values(\'### badges_line\')');
 
 		// // If header is in markfdown then make it html
 		// const htmlContent = this.mdParser.makeHtml('### badgesLine');
