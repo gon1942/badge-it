@@ -6,7 +6,7 @@
 	"scripts": {
 		"lint": "xo --fix",
 		"build": "ncc build index.js -o dist --source-map",
-		"action": "npm run lint && npm run build" 
+		"st": "npm run lint && npm run build" 
 	},
 	"engines": {
 		"node": ">=12"
