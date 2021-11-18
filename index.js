@@ -100,7 +100,8 @@ class GenerateBadges {
 
 		console.log('headerMd=222==' + headerMd);
 
-		const updatedReadme = content.replace(headerMd, newHeaderMd);
+		const updatedReadme = newHeaderMd + '  ' + content;
+		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
 		console.log('updatedReadme===' + updatedReadme);
 
 		// Const aa = document.all.Header.innerHTML = 'Here\'s a New Header!';
