@@ -70,7 +70,7 @@ class GenerateBadges {
 			const newHeaderMd = this.mdParser
 				.makeMarkdown(newHeader, document)
 				.replace(/,/gm, ' ');
-
+			console.log('newheader=2222==' + newHeader);
 			const updatedReadme = content.replace(headerMd, newHeaderMd) + '<br>' + newHeaderMd;
 			// Const updatedReadme = content + '<br>' + newHeaderMd;
 			console.log('updatedReadme===' + updatedReadme);
@@ -78,28 +78,28 @@ class GenerateBadges {
 			return updatedReadme;
 		}
 
-		// If header is in markfdown then make it html
-		const htmlContent = this.mdParser.makeHtml('### badgesLine');
-		const {
-			window: {
-				document
-			}
-		} = new JSDOM(htmlContent);
+		// // If header is in markfdown then make it html
+		// const htmlContent = this.mdParser.makeHtml('### badgesLine');
+		// const {
+		// 	window: {
+		// 		document
+		// 	}
+		// } = new JSDOM(htmlContent);
 
-		// Const header = document.querySelector('h1:nth-child(1)');
-		// console.log('header===' + header);
-		const header = document.createElement('h1');
-		const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
-		// Console.log('headerMd===' + headerMd);
-		const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
-		console.log('newheader===' + newHeader);
-		const newHeaderMd = this.mdParser
-			.makeMarkdown(newHeader, document)
-			.replace(/,/gm, ' ');
+		// // Const header = document.querySelector('h1:nth-child(1)');
+		// // console.log('header===' + header);
+		// const header = document.createElement('h1');
+		// const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+		// // Console.log('headerMd===' + headerMd);
+		// const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+		// console.log('newheader===' + newHeader);
+		// const newHeaderMd = this.mdParser
+		// 	.makeMarkdown(newHeader, document)
+		// 	.replace(/,/gm, ' ');
 
-		const updatedReadme = content.replace(headerMd, newHeaderMd);
-		console.log('updatedReadme===' + updatedReadme);
-		return updatedReadme + '<br>' + newHeaderMd;
+		// const updatedReadme = content.replace(headerMd, newHeaderMd);
+		// console.log('updatedReadme===' + updatedReadme);
+		// return updatedReadme + '<br>' + newHeaderMd;
 	}
 
 	_getReadmeEndpoint() {
