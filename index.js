@@ -41,7 +41,7 @@ class GenerateBadges {
 			this.repoInfo,
 			this.badgeStyle
 		);
-		console.log('content==' + content);
+		// Console.log('content==' + content);
 		console.log('a===' + content.includes('### badgesLine'));
 
 		// If the readme header is in html then don't markdown it.
@@ -69,10 +69,10 @@ class GenerateBadges {
 			return updatedReadme;
 		}
 
-		// Console.log('Don\'t Run... check default Values(\'### badges_line\')');
+		console.log('#### Don\'t Run... check default Values(\'### badges_line\')####');
 
 		// If header is in markfdown then make it html
-		const htmlContent = this.mdParser.makeHtml(`${badges}`);
+		const htmlContent = this.mdParser.makeHtml(content);
 		const {
 			window: {
 				document
