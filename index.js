@@ -82,7 +82,7 @@ class GenerateBadges {
 		// Const header = document.querySelector('h1:nth-child(1)');
 		// console.log('header===' + header);
 
-		const headerText = '# test';
+		const headerText = `# ${badges}`;
 		const aa = this.mdParser.makeHtml(headerText);
 		return aa;
 
