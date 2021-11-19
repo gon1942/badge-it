@@ -91,6 +91,7 @@ class GenerateBadges {
 
 			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
 			console.log('headerMd===' + headerMd);
+			console.log('headerMd= outhtml==' + headerMd.outerHTML);
 
 			document.querySelector('#content').textContent = `${badges}`;
 			console.log('h1Text===' + document.querySelector('#content').textContent);
@@ -104,14 +105,16 @@ class GenerateBadges {
 		// return updatedReadme;
 
 		// const newHeader = `<h1> ${badges}</h1>`;
-		// console.log('newheader===' + newHeader);
-		// const newHeaderMd = this.mdParser
-		// 	.makeMarkdown(newHeader, document)
-		// 	.replace(/,/gm, ' ');
-		// console.log('newHeaderMd===' + newHeaderMd);
+		const newHeader = header.outerHTML;
+		// Console.log('newheader===' + newHeader);
+		const newHeaderMd = this.mdParser
+			.makeMarkdown(newHeader, document)
+			.replace(/,/gm, ' ');
+		console.log('newHeaderMd=ssssssssssssssssssssssssss==' + newHeaderMd);
 
-		const updatedReadme = document.querySelector('#content').textContent + '  ' + content;
+		// Const updatedReadme = newHeaderMd + '  ' + content;
 		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
+		const updatedReadme = content;
 
 		console.log('updatedReadme===' + updatedReadme);
 
