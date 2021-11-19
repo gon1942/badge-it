@@ -97,7 +97,8 @@ class GenerateBadges {
 			.replace(/,/gm, ' ');
 
 		console.log(`${header.textContent}`);
-
+		const chkHeader = `${header.textContent}`;
+		console.log('chkHeader===' + chkHeader);
 		const updatedReadme = content.replace(headerMd, newHeaderMd);
 		// Const updatedReadme = newHeaderMd + '  ' + content.replace(headerMd, newHeaderMd);
 
