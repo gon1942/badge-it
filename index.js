@@ -79,7 +79,7 @@ class GenerateBadges {
 		} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
-
+		let headerMd = '';
 		console.log('aasdasd====' + document.querySelector('content'));
 		if (document.querySelector('content')) {
 			document.querySelector('#content').textContent = '';
@@ -89,7 +89,7 @@ class GenerateBadges {
 
 			console.log('header.outerHTML===' + header.outerHTML);
 
-			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+			headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
 			console.log('headerMd===' + headerMd);
 			console.log('headerMd= outhtml==' + headerMd.outerHTML);
 
@@ -113,8 +113,8 @@ class GenerateBadges {
 		console.log('newHeaderMd=ssssssssssssssssssssssssss==' + newHeaderMd);
 
 		// Const updatedReadme = newHeaderMd + '  ' + content;
-		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
-		const updatedReadme = content;
+		const updatedReadme = content.replace(headerMd, newHeaderMd);
+		// Const updatedReadme = content;
 
 		console.log('updatedReadme===' + updatedReadme);
 
