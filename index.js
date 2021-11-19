@@ -73,8 +73,8 @@ class GenerateBadges {
 
 			console.log('headerBadge===' + headerBadge.outerHTML);
 
-			const updatedReadme = newHeader + '  ' + content.replace(/,/gm, ' ');
-			// Const updatedReadme = content.replace(headerBadge.outerHTML, newHeader).replace(/,/gm, ' ');
+			// Const updatedReadme = newHeader + '  ' + content.replace(/,/gm, ' ');
+			const updatedReadme = newHeader + '  ' + content.replace(headerBadge.outerHTML, newHeader).replace(/,/gm, ' ');
 
 			// Const header = document.createElement('h1');
 			// const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
