@@ -55,14 +55,18 @@ class GenerateBadges {
 
 			const header = document.createElement('h1');
 			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
-			// Console.log('headerMd===' + headerMd);
+			console.log('headerMd===' + headerMd);
+
 			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
 			console.log('newheader===' + newHeader);
+
 			const newHeaderMd = this.mdParser
 				.makeMarkdown(newHeader, document)
 				.replace(/,/gm, ' ');
+
 			console.log('newheader=2222==' + newHeader);
 			console.log('newHeaderMd==== ' + newHeaderMd);
+
 			const updatedReadme = content.replace(headerMd, newHeaderMd) + '  ' + newHeaderMd;
 			// Const updatedReadme = content + '<br>' + newHeaderMd;
 			console.log('updatedReadme===' + updatedReadme);
