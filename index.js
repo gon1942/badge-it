@@ -80,8 +80,8 @@ class GenerateBadges {
 
 		const header = document.querySelector('h1:nth-child(1)');
 		// Const headerMd = '';
-		console.log('aasdasd====' + document.querySelector('content'));
-		if (document.querySelector('content')) {
+		console.log('aasdasd====' + document.querySelector('#content'));
+		if (document.querySelector('#content')) {
 			document.querySelector('#content').textContent = '';
 			document.querySelector('#content').textContent = `${badges}`;
 		} else {
