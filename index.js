@@ -79,19 +79,17 @@ class GenerateBadges {
 		} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
-		let headerMd = '';
+		// Const headerMd = '';
 		console.log('aasdasd====' + document.querySelector('content'));
 		if (document.querySelector('content')) {
 			document.querySelector('#content').textContent = '';
 			document.querySelector('#content').textContent = `${badges}`;
 		} else {
 			// If header is in markfdown then make it html
-
-			console.log('header.outerHTML===' + header.outerHTML);
-
-			headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
-			console.log('headerMd===' + headerMd);
-			console.log('headerMd= outhtml==' + headerMd.outerHTML);
+			// console.log('header.outerHTML===' + header.outerHTML);
+			// headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+			// console.log('headerMd===' + headerMd);
+			// console.log('headerMd= outhtml==' + headerMd.outerHTML);
 
 			document.querySelector('#content').textContent = `${badges}`;
 			console.log('h1Text===' + document.querySelector('#content').textContent);
@@ -112,8 +110,8 @@ class GenerateBadges {
 			.replace(/,/gm, ' ');
 		console.log('newHeaderMd=ssssssssssssssssssssssssss==' + newHeaderMd);
 
-		// Const updatedReadme = newHeaderMd + '  ' + content;
-		const updatedReadme = content.replace(headerMd, newHeaderMd);
+		const updatedReadme = newHeaderMd + '  ' + content;
+		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
 		// Const updatedReadme = content;
 
 		console.log('updatedReadme===' + updatedReadme);
