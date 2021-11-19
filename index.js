@@ -98,8 +98,16 @@ class GenerateBadges {
 
 		console.log(`${header.textContent}`);
 		const chkHeader = `${header.textContent}`;
-		console.log('chkHeader===' + chkHeader);
-		const updatedReadme = content.replace(headerMd, newHeaderMd);
+		console.log('chkHeader===' + chkHeader.length);
+		let updatedReadme = '';
+		if (chkHeader.length === 0) {
+			console.log('111');
+			updatedReadme = newHeaderMd + '  ' + content.replace(headerMd, newHeaderMd);
+		} else {
+			console.log('1222');
+			updatedReadme = content.replace(headerMd, newHeaderMd);
+		}
+		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
 		// Const updatedReadme = newHeaderMd + '  ' + content.replace(headerMd, newHeaderMd);
 
 		return updatedReadme;
