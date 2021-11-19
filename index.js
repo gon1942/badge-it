@@ -69,7 +69,7 @@ class GenerateBadges {
 				}
 			} = new JSDOM(htmlContent);
 			const headerBadge = document.querySelector('h1:nth-child(1)');
-			const newHeader = `<h1 id="badge">${header.textContent} ${badges}</h1>`;
+			const newHeader = `<h1 id="badge">${headerBadge.textContent} ${badges}</h1>`;
 
 			console.log('headerBadge===' + headerBadge.outerHTML);
 
