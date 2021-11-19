@@ -81,7 +81,7 @@ class GenerateBadges {
 		const header = document.querySelector('h1:nth-child(1)');
 		let headerMd = '';
 		let updatedReadme = '';
-
+		console.log('1112=============qew==========++' + header.outerHTML);
 		console.log('aasdasd====' + document.querySelector('#content').textContent);
 		if (document.querySelector('#content')) {
 			console.log('111111111111');
