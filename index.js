@@ -82,8 +82,9 @@ class GenerateBadges {
 		let headerMd = '';
 		let updatedReadme = '';
 
-		console.log('aasdasd====' + document.querySelector('#content'));
+		console.log('aasdasd====' + document.querySelector('#content').textContent);
 		if (document.querySelector('#content')) {
+			console.log('111111111111');
 			document.querySelector('#content').textContent = '';
 			document.querySelector('#content').textContent = `${badges}`;
 
@@ -107,7 +108,7 @@ class GenerateBadges {
 		} else {
 			// If header is in markfdown then make it html
 			// console.log('header.outerHTML===' + header.outerHTML);
-
+			console.log('222222222222');
 			document.querySelector('#content').textContent = `${badges}`;
 			console.log('h1Text===' + document.querySelector('#content').textContent);
 			// Console.log('headerMdouterHTML==' + header.outerHTML);
