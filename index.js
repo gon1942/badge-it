@@ -80,6 +80,8 @@ class GenerateBadges {
 
 		const header = document.querySelector('h1:nth-child(1)');
 		let headerMd = '';
+		let updatedReadme = '';
+
 		console.log('aasdasd====' + document.querySelector('#content'));
 		if (document.querySelector('#content')) {
 			document.querySelector('#content').textContent = '';
@@ -88,6 +90,20 @@ class GenerateBadges {
 			headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
 			console.log('headerMd===' + headerMd);
 			console.log('headerMd= outhtml==' + headerMd.outerHTML);
+
+			console.log('header.outerHTML==wwwwwwwwww=' + header.outerHTML);
+
+			const newHeader = header.outerHTML;
+			const newHeaderMd = this.mdParser
+				.makeMarkdown(newHeader, document)
+				.replace(/,/gm, ' ');
+			console.log('newHeaderMd=ssssssssssssssssssssssssss==' + newHeaderMd);
+
+			// Const updatedReadme = newHeaderMd + '  ' + content;
+			updatedReadme = content.replace(headerMd, newHeaderMd);
+			// Const updatedReadme = content;
+
+			console.log('updatedReadme===' + updatedReadme);
 		} else {
 			// If header is in markfdown then make it html
 			// console.log('header.outerHTML===' + header.outerHTML);
@@ -95,27 +111,21 @@ class GenerateBadges {
 			document.querySelector('#content').textContent = `${badges}`;
 			console.log('h1Text===' + document.querySelector('#content').textContent);
 			// Console.log('headerMdouterHTML==' + header.outerHTML);
+
+			console.log('header.outerHTML==wwwwwwwwww=' + header.outerHTML);
+
+			const newHeader = header.outerHTML;
+			const newHeaderMd = this.mdParser
+				.makeMarkdown(newHeader, document)
+				.replace(/,/gm, ' ');
+			console.log('newHeaderMd=ssssssssssssssssssssssssss==' + newHeaderMd);
+
+			updatedReadme = newHeaderMd + '  ' + content;
+			// Const updatedReadme = content.replace(headerMd, newHeaderMd);
+			// Const updatedReadme = content;
+
+			console.log('updatedReadme===' + updatedReadme);
 		}
-
-		console.log('header.outerHTML==wwwwwwwwww=' + header.outerHTML);
-
-		// Const headerText = `# ${badges}`;
-		// const updatedReadme = this.mdParser.makeHtml(headerText) + '  ' + content;
-		// return updatedReadme;
-
-		// const newHeader = `<h1> ${badges}</h1>`;
-		const newHeader = header.outerHTML;
-		// Console.log('newheader===' + newHeader);
-		const newHeaderMd = this.mdParser
-			.makeMarkdown(newHeader, document)
-			.replace(/,/gm, ' ');
-		console.log('newHeaderMd=ssssssssssssssssssssssssss==' + newHeaderMd);
-
-		const updatedReadme = newHeaderMd + '  ' + content;
-		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
-		// Const updatedReadme = content;
-
-		console.log('updatedReadme===' + updatedReadme);
 
 		// Const aa = document.all.Header.innerHTML = 'Here\'s a New Header!';
 		return updatedReadme;
