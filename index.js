@@ -46,6 +46,21 @@ class GenerateBadges {
 
 		// If the readme header is in html then don't markdown it.
 		// if (content.includes('<h1>')) {
+
+		if (content.includes('<h1 id="badge">')) {
+			const {
+				window: {
+					document
+				}
+			} = new JSDOM(content);
+			const header = document.querySelector('h1:nth-child(1)');
+
+			const newHeader = `<h1 id="badge">${header.textContent} ${badges}</h1>`;
+			const updatedReadme = content.replace(header.outerHTML, newHeader);
+
+			return updatedReadme;
+		}
+
 		if (content.includes('### badgesLine')) {
 			const {
 				window: {
