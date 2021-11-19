@@ -78,12 +78,19 @@ class GenerateBadges {
 			}
 		} = new JSDOM(htmlContent);
 
+		const header = document.querySelector('h1:nth-child(1)');
+
+		console.log('aasdasd====' + document.querySelector('content'));
 		if (document.querySelector('content')) {
 			document.querySelector('#content').textContent = '';
 			document.querySelector('#content').textContent = `${badges}`;
 		} else {
 			// If header is in markfdown then make it html
-			// Const header = document.querySelector('h1:nth-child(1)');
+
+			console.log('header.outerHTML===' + header.outerHTML);
+
+			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
+			console.log('headerMd===' + headerMd);
 
 			document.querySelector('#content').textContent = `${badges}`;
 			console.log('h1Text===' + document.querySelector('#content').textContent);
