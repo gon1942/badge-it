@@ -61,24 +61,6 @@ class GenerateBadges {
 			return updatedReadme;
 		}
 
-		// If (content.includes('### badgesLine')) {
-		// 	const htmlContent = this.mdParser.makeHtml('# badge');
-		// 	const {
-		// 		window: {
-		// 			document
-		// 		}
-		// 	} = new JSDOM(htmlContent);
-		// 	const headerBadge = document.querySelector('h1:nth-child(1)');
-		// 	// const newHeader = `<h1 id="badge">${badges}</h1>`;
-		// 	newHeader.textContent = `<h1 id="badge">${badges}</h1>`;
-
-		// 	console.log('headerBadge===' + headerBadge.outerHTML);
-
-		// 	const updatedReadme = newHeader + '  ' + content.replace(/,/gm, ' ');
-		// 	// Const updatedReadme = newHeader + '  ' + content.replace(headerBadge.outerHTML, newHeader).replace(/,/gm, ' ');
-		// 	return updatedReadme;
-		// }
-
 		console.log('#### Don\'t Run... check default Values(\'### badges_line\')####');
 		// If header is in markfdown then make it html
 		const htmlContent = this.mdParser.makeHtml(content);
