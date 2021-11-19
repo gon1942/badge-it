@@ -57,7 +57,9 @@ class GenerateBadges {
 			const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
 			console.log('headerMd===' + headerMd);
 
-			const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+			const newHeader = `<h1 id="badges">${badges}</h1>`;
+			// Const newHeader = `<h1>${header.textContent} ${badges}</h1>`;
+
 			console.log('newheader===' + newHeader);
 
 			const newHeaderMd = this.mdParser
