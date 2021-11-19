@@ -96,7 +96,10 @@ class GenerateBadges {
 			.makeMarkdown(newHeader, document)
 			.replace(/,/gm, ' ');
 
-		const updatedReadme = newHeaderMd + '  ' + content.replace(headerMd, newHeaderMd);
+		console.log(`${header.textContent}`);
+
+		const updatedReadme = content.replace(headerMd, newHeaderMd);
+		// Const updatedReadme = newHeaderMd + '  ' + content.replace(headerMd, newHeaderMd);
 
 		return updatedReadme;
 	}
