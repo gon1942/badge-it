@@ -69,11 +69,11 @@ class GenerateBadges {
 				}
 			} = new JSDOM(htmlContent);
 			const headerBadge = document.querySelector('h1:nth-child(1)');
-			headerBadge.innerHTML = `${badges}`;
+			const newHeader = `<h1 id="badge">${header.textContent} ${badges}</h1>`;
 
 			console.log('headerBadge===' + headerBadge.outerHTML);
 
-			const updatedReadme = content.replace(header.outerHTML, headerBadge).replace(/,/gm, ' ');
+			const updatedReadme = content.replace(headerBadge.outerHTML, newHeader).replace(/,/gm, ' ');
 
 			// Const header = document.createElement('h1');
 			// const headerMd = this.mdParser.makeMarkdown(header.outerHTML, document);
