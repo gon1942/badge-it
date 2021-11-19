@@ -80,9 +80,10 @@ class GenerateBadges {
 		} = new JSDOM(htmlContent);
 
 		const header = document.querySelector('h1:nth-child(1)');
-		// Console.log('header===' + header);
+		console.log('header===' + header);
+		console.log('header.outerHTML===' + header.outerHTML);
 
-		// const headerText = `# ${badges}`;
+		// Const headerText = `# ${badges}`;
 		// const updatedReadme = this.mdParser.makeHtml(headerText) + '  ' + content;
 		// return updatedReadme;
 
