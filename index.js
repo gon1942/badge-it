@@ -56,7 +56,7 @@ class GenerateBadges {
 			const header = document.querySelector('h1:nth-child(1)');
 
 			const newHeader = `<h1 id="badge">${header.textContent} ${badges}</h1>`;
-			const updatedReadme = content.replace(header.outerHTML, newHeader);
+			const updatedReadme = content.replace(header.outerHTML, newHeader).replace(/,/gm, ' ');
 
 			return updatedReadme;
 		}
