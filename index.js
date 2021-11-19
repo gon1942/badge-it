@@ -97,6 +97,8 @@ class GenerateBadges {
 			// Console.log('headerMdouterHTML==' + header.outerHTML);
 		}
 
+		console.log('header.outerHTML==wwwwwwwwww=' + header.outerHTML);
+
 		// Const headerText = `# ${badges}`;
 		// const updatedReadme = this.mdParser.makeHtml(headerText) + '  ' + content;
 		// return updatedReadme;
@@ -110,6 +112,7 @@ class GenerateBadges {
 
 		const updatedReadme = document.querySelector('#content').textContent + '  ' + content;
 		// Const updatedReadme = content.replace(headerMd, newHeaderMd);
+
 		console.log('updatedReadme===' + updatedReadme);
 
 		// Const aa = document.all.Header.innerHTML = 'Here\'s a New Header!';
