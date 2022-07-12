@@ -32,7 +32,7 @@ class GenerateBadges {
 		console.log('token==' + this.token);
 		console.log('inputBadges==' + this.inputBadges);
 		console.log('repoInfo==' + this.repoInfo);
-		console.log('badgeLine==' + this.badgeLine);
+		console.log('badgeLine==' + this.badgesLine);
 	}
 
 	_addBadges(content) {
