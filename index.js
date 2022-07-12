@@ -31,7 +31,7 @@ class GenerateBadges {
 		console.log('inputtoken==', this.token);
 		console.log('this.inputBadges');
 		console.log('inputrepoInfo==', this.repoInfo);
-		console.log('inputbadgeStyle==',this.badgeStyle);
+		console.log('inputbadgeStyle==', this.badgeStyle);
 		console.log('inputbadgeLine==', this.badgesLine);
 	}
 
@@ -41,12 +41,12 @@ class GenerateBadges {
 			this.repoInfo,
 			this.badgeStyle
 		);
-		//console.log('content==' + content);
-		//console.log('a===' + content.includes('### badgesLine'));
+		// Console.log('content==' + content);
+		// console.log('a===' + content.includes('### badgesLine'));
 
 		// If the readme header is in html then don't markdown it.
 		// if (content.includes('<h1>')) {
-		//console.log("chk point --- 1", content.includes('<h1 id="badge">'));
+		// console.log("chk point --- 1", content.includes('<h1 id="badge">'));
 		if (content.includes('<h1 id="badge">')) {
 			const {
 				window: {
@@ -104,7 +104,6 @@ class GenerateBadges {
 	}
 
 	async init() {
-		
 		try {
 			const {
 				data: {

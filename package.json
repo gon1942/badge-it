@@ -2,11 +2,11 @@
 	"name": "badge-it",
 	"version": "2.0.0",
 	"description": "Github action to add badges to your readme automatically",
-	"main": "./index.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"lint": "xo --fix",
 		"build": "ncc build index.js -o dist --source-map",
-		"st": "npm run lint && npm run build && git add . && git commit -m 'test' && git push " 
+		"st": "npm run lint && npm run build && git add . && git commit -m 'test' && git push "
 	},
 	"engines": {
 		"node": ">=12"
