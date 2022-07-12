@@ -29,7 +29,7 @@ class GenerateBadges {
 		this.mdParser = new showdown.Converter();
 
 		Console.log('inputtoken==', this.token);
-		Console.log('this.inputBadges);
+		Console.log('this.inputBadges');
 		Console.log('inputrepoInfo==', this.repoInfo);
 		Console.log('inputbadgeStyle==',this.badgeStyle);
 		Console.log('inputbadgeLine==', this.badgesLine);
