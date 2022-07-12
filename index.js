@@ -29,11 +29,11 @@ class GenerateBadges {
 		this.action = github.context.payload.action;
 		this.mdParser = new showdown.Converter();
 
-		console.log('input token==' + this.token);
-		console.log('input inputBadges==' + this.inputBadges);
-		console.log('input repoInfo==' + this.repoInfo);
-		console.log('input badgeStyle==' + this.badgeStyle);
-		console.log('input badgeLine==' + this.badgesLine);
+		console.log('input token==', this.token);
+		console.log('input inputBadges==', this.inputBadges);
+		console.log('input repoInfo==', this.repoInfo);
+		console.log('input badgeStyle==',this.badgeStyle);
+		console.log('input badgeLine==', this.badgesLine);
 	}
 
 	_addBadges(content) {
@@ -47,7 +47,7 @@ class GenerateBadges {
 
 		// If the readme header is in html then don't markdown it.
 		// if (content.includes('<h1>')) {
-		console.log("chk point 1", content.includes('<h1 id="badge">'));
+		//console.log("chk point --- 1", content.includes('<h1 id="badge">'));
 		if (content.includes('<h1 id="badge">')) {
 			const {
 				window: {
