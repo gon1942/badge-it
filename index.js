@@ -31,6 +31,7 @@ class GenerateBadges {
 		console.log('inputtoken==', this.token);
 		console.log('this.inputBadges');
 		console.log('inputrepoInfo==', this.repoInfo);
+		console.log('inputrepoInfo==', JSON.stringify(this.repoInfo));
 		console.log('inputbadgeStyle==', this.badgeStyle);
 		console.log('inputbadgeLine==', this.badgesLine);
 	}
