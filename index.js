@@ -19,7 +19,7 @@ class GenerateBadges {
 		this.token = core.getInput('GITHUB_TOKEN');
 		this.inputBadges = core.getInput('badges');
 		this.badgeStyle = core.getInput('badge-style');
-		this.badgesLine = core.getInput('badges_line');
+		//this.badgesLine = core.getInput('badges_line');
 
 		this.octokit = github.getOctokit(this.token);
 		this.repoInfo = github.context.repo;
@@ -31,7 +31,7 @@ class GenerateBadges {
 		console.log('inputrepoInfo==', this.repoInfo);
 		console.log('inputrepoInfo==', JSON.stringify(this.repoInfo));
 		console.log('inputbadgeStyle==', this.badgeStyle);
-		console.log('inputbadgeLine==', this.badgesLine);
+		//console.log('inputbadgeLine==', this.badgesLine);
 	}
 
 	_addBadges(content) {
