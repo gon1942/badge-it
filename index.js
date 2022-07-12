@@ -105,7 +105,7 @@ class GenerateBadges {
 	}
 
 	async init() {
-		console.log("init====");
+		
 		try {
 			const {
 				data: {
