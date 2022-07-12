@@ -10,7 +10,7 @@ jobs:
       - name: install
         run: yarn install
         
-      - name: install
+      - name: build
         run: yarn run build
         
       - name: Linting 
