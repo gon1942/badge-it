@@ -14,14 +14,31 @@ A Github action to add badges in your `README.md` without any hassle. We love ba
 - **Badge Style** - To specifiy style for your badges .Add your preffered badge style in the `badge-style` input. Default is `flat`.
 
 ```yml
-- name: Add Badges
-  uses: rocktimsaikia/badge-it@master
-  with:
-    GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-    badges: 'gh_license, gh_version, gh_stars'
-    badge-style: 'flat-square'
+
+
+name: 'test badgit'
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: add badges
+        uses: gon1942/badge-it@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          badges: 'gh_license,gh_version, gh_stars, gh_fork, gh_open_issue, gh_open_pr, gh_dependencies, gh_repo_size, gh_code_size, travis_com, travis_org'
+          badge-style: 'flat-square'
 ```
 
+```yml
+- Add html Tag in Readme.md 
+ 
+<h1 id="badge"></h1>
+
+```
 ## Inputs
 
 - **GITHUB\_TOKEN** - A personal Github token.
