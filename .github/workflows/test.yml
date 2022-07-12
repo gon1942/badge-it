@@ -10,5 +10,5 @@ jobs:
       - name: install
         run: yarn install
         
-      - name: Linting
+      - name: Linting 
         run: yarn run lint
