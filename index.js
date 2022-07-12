@@ -42,8 +42,8 @@ class GenerateBadges {
 			this.repoInfo,
 			this.badgeStyle
 		);
-		console.log('content==' + content);
-		console.log('a===' + content.includes('### badgesLine'));
+		//console.log('content==' + content);
+		//console.log('a===' + content.includes('### badgesLine'));
 
 		// If the readme header is in html then don't markdown it.
 		// if (content.includes('<h1>')) {
