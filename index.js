@@ -29,10 +29,11 @@ class GenerateBadges {
 		this.action = github.context.payload.action;
 		this.mdParser = new showdown.Converter();
 
-		console.log('token==' + this.token);
-		console.log('inputBadges==' + this.inputBadges);
-		console.log('repoInfo==' + this.repoInfo);
-		console.log('badgeLine==' + this.badgesLine);
+		console.log('input token==' + this.token);
+		console.log('input inputBadges==' + this.inputBadges);
+		console.log('input repoInfo==' + this.repoInfo);
+		console.log('input badgeStyle==' + this.badgeStyle);
+		console.log('input badgeLine==' + this.badgesLine);
 	}
 
 	_addBadges(content) {
